@@ -8,112 +8,180 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>StudyMate - Goals</title>
+    <title>Student Study Planner</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="studentstyle.css">
 
 </head>
 
 
 <body>
 
+    <!-- Sidebar -->
+
     <aside class="sidebar">
 
         <h2>🎓 StudyMate</h2>
 
         <nav>
-
-            <a href="index.html">🏠 Home</a>
-
-            <a href="subjects.html">📚 Subjects</a>
-
-            <a href="schedule.html">📅 Schedule</a>
-
-            <a href="tasks.html">✅ Tasks</a>
-
-            <a href="timer.html">⏱️ Focus Mode</a>
-
-            <a href="progress.html">📈 Analytics</a>
-
-            <a href="goals.html" class="active">
-                🎯 Goals
-            </a>
-
-        </nav>
+    <a href="student-study-planner.html">🏠 Home</a>
+    <a href="student-subject.html">📚 Subjects</a>
+    <a href="student-schedule.html">📅 Schedule</a>
+    <a href="student-task.html">✅ Tasks</a>
+    <a href="student-timer.html">⏱️ Focus Mode</a>
+    <a href="student-progress.html">📈 Analytics</a>
+    <a href="student-goals.html">🎯 Goals</a>
+</nav>
 
     </aside>
 
 
+    <!-- Main Content -->
+
     <main class="main">
+
+        <!-- Header -->
 
         <header>
 
             <div>
 
-                <h1>🎯 My Goals</h1>
+                <h1>Good Afternoon! 👋</h1>
 
-                <p>Set goals and stay motivated.</p>
+                <p>Ready to study today?</p>
 
             </div>
+
+            <button id="themeBtn">🌙</button>
 
         </header>
 
 
-        <section class="goal-list">
+        <!-- Statistics -->
 
-            <div class="goal-card">
+        <section class="stats">
 
-                <h2>🎯 Study 3 Hours Today</h2>
+            <div class="stat-card">
 
-                <p>Progress: 2 / 3 hours</p>
+                <h3>📚</h3>
 
-                <div class="progress-bar">
+                <h2 id="subjectCount">0</h2>
 
-                    <div style="width: 66%;">
-                        66%
-                    </div>
-
-                </div>
+                <p>Subjects</p>
 
             </div>
 
 
-            <div class="goal-card">
+            <div class="stat-card">
 
-                <h2>💻 Complete 5 Coding Problems</h2>
+                <h3>✅</h3>
 
-                <p>Progress: 3 / 5 problems</p>
+                <h2 id="completedCount">0</h2>
 
-                <div class="progress-bar">
-
-                    <div style="width: 60%;">
-                        60%
-                    </div>
-
-                </div>
+                <p>Completed</p>
 
             </div>
 
 
-            <div class="goal-card">
+            <div class="stat-card">
 
-                <h2>📚 Finish JavaScript Course</h2>
+                <h3>🎯</h3>
 
-                <p>Progress: 70%</p>
+                <h2 id="progress">0%</h2>
 
-                <div class="progress-bar">
+                <p>Progress</p>
 
-                    <div style="width: 70%;">
-                        70%
-                    </div>
+            </div>
 
-                </div>
+        </section>
+
+
+        <!-- Add Task -->
+
+        <section class="task-section">
+
+            <div class="section-header">
+
+                <h2>Today's Tasks</h2>
+
+                <button id="addTaskBtn">
+                    + Add Task
+                </button>
+
+            </div>
+
+
+            <!-- Task Form -->
+
+            <div id="taskForm" class="task-form">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter study task"
+                >
+
+
+                <input
+                    type="text"
+                    id="subjectInput"
+                    placeholder="Subject"
+                >
+
+
+                <input
+                    type="time"
+                    id="timeInput"
+                >
+
+
+                <button id="saveTaskBtn">
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <!-- Task List -->
+
+            <div id="taskList">
+
+                <!-- Tasks will appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Study Timer -->
+
+        <section class="timer-section">
+
+            <h2>⏱️ Study Timer</h2>
+
+            <div id="timer">
+                25:00
+            </div>
+
+
+            <div class="timer-buttons">
+
+                <button id="startBtn">
+                    Start
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
 
             </div>
 
         </section>
 
     </main>
+
+
+    <script src="studentscript.js"></script>
 
 </body>
 
